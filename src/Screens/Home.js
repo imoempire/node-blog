@@ -54,7 +54,9 @@ const Home=() =>{
           Latest Posts
         </Text>
       </View>
+      <View style={{flex: 1}}>
       <PostlistItem2 post={latestPosts} />
+      </View>
     </View>
   );
 }

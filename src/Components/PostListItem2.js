@@ -59,7 +59,7 @@ const Postlistitem = ({ post }) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 300,
+    height: 200,
     width: width - 150,
     marginHorizontal: 10,
     marginVertical: 20,
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   textContainer: {
     backgroundColor: "white",
     marginHorizontal: 10,
-    marginTop: width - 200,
+    marginTop: 100,
     borderRadius: 5,
     padding: 10,
   },
