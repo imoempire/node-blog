@@ -24,8 +24,8 @@ const Postlistitem = ({ post }) => {
 
   const fetchSinglePost = async (slug) => {
     const { error, post } = await getPost(slug);
-    if(error) console.log(error);
-    navigate("Post", {post});
+    if (error) console.log(error);
+    navigate("Post", { post });
   };
 
   return (
@@ -36,21 +36,20 @@ const Postlistitem = ({ post }) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return (
-            <ImageBackground
-              imageStyle={{ borderRadius: 6 }}
-              source={getThumbnail(item.thumbnail)}
-              style={styles.container}
-            >
-              <TouchableOpacity
-                style={styles.textContainer}
-                onPress={() => fetchSinglePost(item.slug)}
+            <TouchableOpacity onPress={() => fetchSinglePost(item.slug)}>
+              <ImageBackground
+                imageStyle={{ borderRadius: 6 }}
+                source={getThumbnail(item.thumbnail)}
+                style={styles.container}
               >
-                <Text style={styles.title}>{item.title}</Text>
-                <Text style={styles.date}>
-                  {dateformat(createdAt, "mediumDate")} {item.author}
-                </Text>
-              </TouchableOpacity>
-            </ImageBackground>
+                <TouchableOpacity style={styles.textContainer}>
+                  <Text style={styles.title}>{item.title}</Text>
+                  <Text style={styles.date}>
+                    {dateformat(createdAt, "mediumDate")} {item.author}
+                  </Text>
+                </TouchableOpacity>
+              </ImageBackground>
+            </TouchableOpacity>
           );
         }}
       />

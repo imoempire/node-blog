@@ -130,10 +130,10 @@ export default function Slider({data, title}) {
           index,
         })}
         keyExtractor={(item, index) => item.id + index}
-        onViewableItemsChanged={onViewableItemsChanged.current}
-        viewabilityConfig={viewabilityConfig.current}
-        onScrollBeginDrag={pauseAutoScroll}
-        onScrollEndDrag={startAutoScroll}
+        // onViewableItemsChanged={onViewableItemsChanged.current}
+        // viewabilityConfig={viewabilityConfig.current}
+        // onScrollBeginDrag={pauseAutoScroll}
+        // onScrollEndDrag={startAutoScroll}
         renderItem={renderItem}
       />
     </View>
